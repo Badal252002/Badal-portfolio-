@@ -6,6 +6,38 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+nav {
+  background-color: rgba(0,0,0,0,7);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 100px 0;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+.menu a {
+  color: #00ffd5;
+  text-decoration: none;
+  font-weight: bold;
+  transtion: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ff9900;
+}
+
+
+  
 /* Light theme */
 @media (prefers-color-scheme: light) {
   body {
