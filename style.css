@@ -1,62 +1,53 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* Apply general styles */
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #fff;
+  font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Headings style with animation */
-h1, h2 {
-  animation: fadeIn 2s ease-in-out;
+/* Light theme */
+@media (prefers-color-scheme: light) {
+  body {
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
+    color: #000;
+  }
+
+  a {
+    color: #007acc;
+  }
 }
 
-/* Paragraphs and list items style with animation */
-p, li {
-  animation: fadeIn 3s ease-in-out;
-  font-size: 1.2em;
-  line-height: 1.6;
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+  }
+
+  a {
+    color: #00ffd5;
+  }
 }
 
-/* Lists styling */
+h1, h2, p, li {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
 ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
 li {
-  background: rgba(255, 255, 255, 0.1);
-  margin: 10px auto;
-  padding: 10px;
-  max-width: 400px;
-  border-radius: 10px;
-}
-
-/* Fade in keyframe animation */
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Links styling */
-a {
-  color: #00ffd5;
-  text-decoration: none;
-  font-weight: bold;
+  margin: 10px 0;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
-  h1 { font-size: 2em; }
-  h2 { font-size: 1.5em; }
-  p, li { font-size: 1em; }
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
