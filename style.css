@@ -201,6 +201,15 @@ a:hover {
   }
 }
 
+/* Example of a subtle hover effect on buttons */
+.cta-btn:hover {
+   background-color: #00A1FF;
+   color: white;
+   transform: scale(1.05);
+   transition: 0.3s ease-in-out;
+}
+
+
 .social-icons a img:hover {
   transform: scale(1.2);
 }
